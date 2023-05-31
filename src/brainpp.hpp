@@ -10,7 +10,7 @@
 namespace BrainPP {
 	class BrainPP {
 	private:
-		int memory[255] = {0};
+		int memory[30000] = {0};
 		int pointer = 0;
 		std::vector<std::array<int, 2>> loops;
 		std::string input = "";
