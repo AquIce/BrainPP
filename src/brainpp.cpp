@@ -42,9 +42,10 @@ void BrainPP::BrainPP::run(std::string input, bool file) {
 				break;
 			case '>':
 				this->pointer++;
+				if(this->pointer >= this->memory.size()) { this->memory.push_back(0); }
 				break;
 			case '<':
-				this->pointer--;
+				if(this->pointer > 0) { this->pointer--; }
 				break;
 			case '.':
 				std::cout << char(this->memory[this->pointer]);
